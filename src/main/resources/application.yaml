@@ -1,0 +1,6 @@
+service:
+  prop:
+    base-price: 5000
+    base-price-unit: kilo
+    
+spring:  cloud:    kubernetes:      config:        enabled: true      reload:        enabled: true
