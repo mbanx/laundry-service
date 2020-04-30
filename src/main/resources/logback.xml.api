@@ -1,0 +1,10 @@
+<configuration>
+  
+  <property name="STACKDRIVER_LOG_NAME" value="laundry-service" />
+  
+  <include resource="org/springframework/cloud/gcp/logging/logback-appender.xml" />
+
+  <root level="INFO">
+    <appender-ref ref="STACKDRIVER" />
+  </root>
+</configuration>
