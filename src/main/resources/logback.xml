@@ -1,7 +1,11 @@
 <configuration>
-  <include resource="org/springframework/cloud/gcp/logging/logback-json-appender.xml" />
 
-  <root level="INFO">
-    <appender-ref ref="CONSOLE_JSON" />
-  </root>
+	<property name="STACKDRIVER_LOG_NAME" value="laundry-service" />
+
+	<include resource="org/springframework/cloud/gcp/logging/logback-json-appender.xml" />
+
+	<root level="INFO">
+		<appender-ref ref="CONSOLE_JSON" />
+		<appender-ref ref="STACKDRIVER" />
+	</root>
 </configuration>
