@@ -10,6 +10,7 @@ public class ServiceProperties {
 	private long basePrice;
 	private String basePriceUnit;
 	private String baseType;
+	private int baseFixRateDelay;
 
 	public long getBasePrice() {
 		return basePrice;
@@ -33,6 +34,14 @@ public class ServiceProperties {
 
 	public void setBaseType(String baseType) {
 		this.baseType = baseType;
+	}
+
+	public int getBaseFixRateDelay() {
+		return baseFixRateDelay;
+	}
+
+	public void setBaseFixRateDelay(int baseFixRateDelay) {
+		this.baseFixRateDelay = baseFixRateDelay;
 	}
 
 	@Override

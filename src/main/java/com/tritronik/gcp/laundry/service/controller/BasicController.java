@@ -6,6 +6,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,8 +18,6 @@ import com.tritronik.gcp.laundry.service.props.ServiceProperties;
 @RequestMapping("/basic")
 public class BasicController {
 
-	private Logger logger = LoggerFactory.getLogger("");
-	
 	@Autowired
 	private ServiceProperties serviceProperties;
 	
@@ -51,4 +50,9 @@ public class BasicController {
 		return response;
 	}
 	
+	@Scheduled(fixedDelayString = "#{@serviceProperties.baseFixRateDelay}")
+	public void scheduleFixedDelayTask() {
+		String methodName = new Throwable().getStackTrace()[0].getMethodName();
+		loggerController.info("{} trigger using spring scheduler", methodName);
+	}
 }
