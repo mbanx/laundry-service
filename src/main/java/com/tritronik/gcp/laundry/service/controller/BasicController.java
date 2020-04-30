@@ -45,6 +45,7 @@ public class BasicController {
 		Map<String, Object> response = new HashMap<>();
 		response.put("basePrice", serviceProperties.getBasePrice());
 		response.put("basePriceUnit", serviceProperties.getBasePriceUnit());
+		response.put("baseType", serviceProperties.getBaseType());
 		loggerController.info("{} - finish... ", methodName);
 		
 		return response;

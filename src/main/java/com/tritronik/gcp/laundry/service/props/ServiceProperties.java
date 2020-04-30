@@ -9,6 +9,7 @@ public class ServiceProperties {
 
 	private long basePrice;
 	private String basePriceUnit;
+	private String baseType;
 
 	public long getBasePrice() {
 		return basePrice;
@@ -24,6 +25,14 @@ public class ServiceProperties {
 
 	public void setBasePriceUnit(String basePriceUnit) {
 		this.basePriceUnit = basePriceUnit;
+	}
+
+	public String getBaseType() {
+		return baseType;
+	}
+
+	public void setBaseType(String baseType) {
+		this.baseType = baseType;
 	}
 
 	@Override
