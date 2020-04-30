@@ -11,25 +11,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tritronik.gcp.laundry.InstanceInformationService;
 import com.tritronik.gcp.laundry.service.props.ServiceProperties;
 
 @RestController
 @RequestMapping("/basic")
 public class BasicController {
 
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	private Logger logger = LoggerFactory.getLogger("");
 	
 	@Autowired
 	private ServiceProperties serviceProperties;
 	
 	@Autowired
-	private InstanceInformationService iis;
+	private Logger loggerController;
+	
+	@Autowired
+	private Logger loggerUtil;
 	
 	@GetMapping("/instance/info")
 	@ResponseBody
 	public String getInstanceInformation() {
-		return iis.retrieveInstanceInfo();
+		String methodName = new Throwable().getStackTrace()[0].getMethodName();
+		
+		loggerUtil.info("{} - finish... ", methodName);
+		return "test";
 	}
 	
 	@GetMapping("/configuration/default")
@@ -40,7 +45,7 @@ public class BasicController {
 		Map<String, Object> response = new HashMap<>();
 		response.put("basePrice", serviceProperties.getBasePrice());
 		response.put("basePriceUnit", serviceProperties.getBasePriceUnit());
-		logger.info("{} - {} finish... ", iis.retrieveInstanceInfo(), methodName);
+		loggerController.info("{} - finish... ", methodName);
 		
 		return response;
 	}
