@@ -88,7 +88,7 @@ public class Application {
 		return new DirectChannel();
 	}
 
-	@Bean
+	
 	@ServiceActivator(inputChannel = "myInputChannel")
 	public void messageReceiver(String payload) {
 		loggerMain.info("Message arrived! Payload: " + payload);

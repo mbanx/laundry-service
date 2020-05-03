@@ -1,4 +1,4 @@
-FROM openjdk:11-slim
+FROM openjdk:8-alpine
 VOLUME /tmp
 EXPOSE 8080
 ADD target/*.jar app.jar
