@@ -38,8 +38,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EntityScan(basePackages = { "com.tritronik.gcp.laundry" })
 public class Application {
 	
-	private static final String PUBSUB_INPUT_CHANNEL = "myInputChannel";
-	private static final String PUBSUB_OUTPUT_CHANNEL = "myOutputChannel";
+	private static final String PUBSUB_INPUT_CHANNEL = "pubsubInputChannel";
+	private static final String PUBSUB_OUTPUT_CHANNEL = "pubsubOutputChannel";
+	private static final String PUBSUB_TOPIC = "laundry-service";
 	
 	@Autowired
 	private Logger loggerMain;
@@ -100,7 +101,7 @@ public class Application {
 	@Bean
 	@ServiceActivator(inputChannel = PUBSUB_OUTPUT_CHANNEL)
 	public MessageHandler messageSender(PubSubTemplate pubsubTemplate) {
-		return new PubSubMessageHandler(pubsubTemplate, "laundry-service");
+		return new PubSubMessageHandler(pubsubTemplate, PUBSUB_TOPIC);
 	}
 	
 	@MessagingGateway(defaultRequestChannel = PUBSUB_OUTPUT_CHANNEL)
