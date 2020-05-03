@@ -37,7 +37,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableJpaRepositories(basePackages = { "com.tritronik.gcp.laundry" })
 @EntityScan(basePackages = { "com.tritronik.gcp.laundry" })
 public class Application {
-
+	
+	private static final String PUBSUB_INPUT_CHANNEL = "myInputChannel";
+	private static final String PUBSUB_OUTPUT_CHANNEL = "myOutputChannel";
+	
 	@Autowired
 	private Logger loggerMain;
 
@@ -74,7 +77,7 @@ public class Application {
 
 	@Bean
 	public PubSubInboundChannelAdapter messageChannelAdapter(
-			@Qualifier("pubsubInputChannel") MessageChannel inputChannel, PubSubTemplate pubSubTemplate) {
+			@Qualifier(PUBSUB_INPUT_CHANNEL) MessageChannel inputChannel, PubSubTemplate pubSubTemplate) {
 		PubSubInboundChannelAdapter adapter = new PubSubInboundChannelAdapter(pubSubTemplate,
 				"laundry-service-subscription");
 		adapter.setOutputChannel(inputChannel);
@@ -89,18 +92,18 @@ public class Application {
 	}
 
 	
-	@ServiceActivator(inputChannel = "myInputChannel")
+	@ServiceActivator(inputChannel = PUBSUB_INPUT_CHANNEL)
 	public void messageReceiver(String payload) {
 		loggerMain.info("Message arrived! Payload: " + payload);
 	}
 
 	@Bean
-	@ServiceActivator(inputChannel = "myOutputChannel")
+	@ServiceActivator(inputChannel = PUBSUB_OUTPUT_CHANNEL)
 	public MessageHandler messageSender(PubSubTemplate pubsubTemplate) {
 		return new PubSubMessageHandler(pubsubTemplate, "laundry-service");
 	}
 	
-	@MessagingGateway(defaultRequestChannel = "myOutputChannel")
+	@MessagingGateway(defaultRequestChannel = PUBSUB_OUTPUT_CHANNEL)
 	public interface PubsubOutboundGateway {
 		void sendToPubsub(String text);
 	}
