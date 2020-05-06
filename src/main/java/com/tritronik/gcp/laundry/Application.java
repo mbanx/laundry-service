@@ -103,10 +103,12 @@ public class Application {
 		}
 
 		//Credential file access from absolute path
+		/*
 		{
 			String credentialFilePath = "C:\\Users\\62856\\Desktop\\GCP\\cloud-storage-admin-sa.json";
 			credentials = GoogleCredentials.fromStream(new FileInputStream(credentialFilePath));
 		}
+		*/
 		
 		Storage storage = StorageOptions.newBuilder().setCredentials(credentials).setProjectId(GCP_PROJECT_ID).build()
 				.getService();
