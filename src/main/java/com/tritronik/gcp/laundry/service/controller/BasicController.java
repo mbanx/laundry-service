@@ -72,7 +72,7 @@ public class BasicController {
 	}
 
 	@Scheduled(fixedDelayString = "#{@serviceProperties.baseFixRateDelay}")
-	@SchedulerLock(name = "scheduleFixedDelayTask", lockAtMostFor = "1m", lockAtLeastFor = "#{@serviceProperties.baseLockAtLeastFor}")
+	@SchedulerLock(name = "scheduleFixedDelayTask", lockAtMostFor = "#{@serviceProperties.baseLockAtMostFor}", lockAtLeastFor = "#{@serviceProperties.baseLockAtLeastFor}")
 	public void scheduleFixedDelayTask() {
 		// To assert that the lock is held (prevents misconfiguration errors)
 		LockAssert.assertLocked();

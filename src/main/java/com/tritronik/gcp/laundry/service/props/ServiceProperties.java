@@ -12,6 +12,7 @@ public class ServiceProperties {
 	private String baseType;
 	private int baseFixRateDelay;
 	private int baseLockAtLeastFor;
+	private int baseLockAtMostFor;
 
 	public long getBasePrice() {
 		return basePrice;
@@ -46,12 +47,21 @@ public class ServiceProperties {
 	}
 
 	public int getBaseLockAtLeastFor() {
-		baseLockAtLeastFor = baseFixRateDelay - 1000;
+		baseLockAtLeastFor = (baseFixRateDelay - 1000);
 		return baseLockAtLeastFor;
 	}
 
 	public void setBaseLockAtLeastFor(int baseLockAtLeastFor) {
 		this.baseLockAtLeastFor = baseLockAtLeastFor;
+	}
+
+	public int getBaseLockAtMostFor() {
+		baseLockAtMostFor = (baseFixRateDelay + 1000);
+		return baseLockAtMostFor;
+	}
+
+	public void setBaseLockAtMostFor(int baseLockAtMostFor) {
+		this.baseLockAtMostFor = baseLockAtMostFor;
 	}
 
 	@Override

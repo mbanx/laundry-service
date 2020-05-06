@@ -57,10 +57,14 @@
 		</dependency>
 
 		<!-- Cloud SQL Only -->
+		<!--  
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
 		</dependency>
+		-->
+		<!-- Cloud SQL Only -->
+		
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
