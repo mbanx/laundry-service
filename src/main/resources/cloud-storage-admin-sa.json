@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dev-tritronik",
+  "private_key_id": "a302f9b1313bbe9d866ce2ab7912a14d7ad4851f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCv2tyKArSCnh1H\nhVtabLuzt+vnKE6POOmZAF/qF9eu/cjDIRfb+8x+3WDYbzeFRbcmCOVfyNQEAhv5\nNwKi3ZOArDhirgZ5ck++Qm14VrTyU7a2arp8w9S5H9FlV9pL3nzVFLyo4eHqweVH\nqUbJJj5aCGw6cXOQI0ArWZQoLCWspmS4A2XkH9pTan3y0FuAXSyx0fXphCA7M8H0\nVjfhfXHY+oyZo+ARJnCZqO9f3kMsN+igDTTYvVpThvZ/I24s/iJpjCzUnFdzhtsA\nRHpbcJGOPA/z2tIdIVRwcTyHc1virHio5CwgeX3fAXIadvI+yXM7RD1jxgUz+F/Y\nXit9SsPHAgMBAAECggEATlZeWSKEXA1oeKRZAiqe4Rvk/Dfx6w5MzWoj0Ann/F20\ncexLjyUXv0oJ6tB8eKOKR2i+GVHC1LhF0tplE71GCJNvmNHyM2avTE+WKX3ipHKT\nWaaoxYyNNhyM8KrWpWaK0Hco5cieFbBjXW10iYW+T+gholVIyCRT4RvKCq1D6SkH\ndxa331Cpi5BXqyAj90xmJpAVz6pOCDjyXmTyI7NPrNwkWjrF98sEpUn5z95hl1JG\nCr4Jkd+6JBQuASOtU1e1HMc66gAfVQ67GTD6o8r4gEaltSUbw2ugJqo9QcnpTMc8\nfud2aF7ZqeUi4E+0qO39s5Z+Xwce9ySnfZKWAJirPQKBgQDWrHBfPupUErqDpcid\n5DkoCnqK6WYX/SlR8OLIJj4vGNzSEu233NwiGJii/l6ULaOQYG8uTt5b3U/BMmU1\n1vMoI/tehvBFwXJ2rtu3FKh7FKQze0hOnbHaaUZjjvN+Mt/db8SKdvxezjiN/7sF\nL5w2FER2WU6z33C/oQrUsYXBowKBgQDRtVutg8y8AfchQsbeU6aBu1hqEZsJwlTB\nqlKEpwbZEVNKcwHLdfJTYHyR5qw/MNfg7oBEFl283CHff7f+mjGJ6KYRhvZuB3yq\nFUN2P8q6n9CjoRTPSBwevPVMHP0/+WiNXgOgLD8YWdWzKFeuf009R18qIvmRsw9+\nEYpL86g/jQKBgD0c8AydW5Y9kq1hp8ATNZZJjWM4WKEhp/60xcrW4EMGH+8KBnSe\nQmjOeb2FDqW+bF7wpRYYy8J5OXg1gYyXObfGrovVfFdPX+ebld8D2YbYdHpXcVk4\nGWalK62yB214zDQ82kXU47mVmZILKFGsoRrgIDFU8UvRo0ZacTvlob9jAoGBALab\n4hUaK/GbFIOWDm4TEW7uoHLcmdDJs9xgYDK67y+d8pVlyC5PqpAH+PFjmKH9+j4X\n8QFZKI8IcUaZhLLjujeIqvOgPn5Zbqj8kx4pNnOELr4Nyn0lIbdye3en1q8ak3xm\nXWngnaCquXekrZV5rNyrhaa/herlrZvt0iuJJP0RAoGBAJ1xrxVx37QzczfQ8QfM\n4dv1aRyENr5TQTc0fFYQlnE0mQj2Qf3HkHtRHZKrIVs97nVIG5e2iv+Mdtb86IBC\n8mwTk7B1N4Zfbe/D9uZfacHzsB0ds0d6FzK17CpRqLgMPE+zmqdSmp86LYV69w42\nAHUwnJjXD1CysyqZ2wA6nsPw\n-----END PRIVATE KEY-----\n",
+  "client_email": "cloud-storage-admin-sa@dev-tritronik.iam.gserviceaccount.com",
+  "client_id": "110800663598677805569",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloud-storage-admin-sa%40dev-tritronik.iam.gserviceaccount.com"
+}
